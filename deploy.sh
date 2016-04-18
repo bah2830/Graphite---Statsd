@@ -6,8 +6,8 @@ if [ "$1" == "debug" ]; then
 fi
 
 GRAPHITE_DATA=""
-if [ -d "/Storage/Backup/graphite_data" ]; then
-    GRAPHITE_DATA="-v /Storage/Backup/graphite_data:/opt/graphite/storage"
+if [ -d "/Storage/Backup/graphite" ]; then
+    GRAPHITE_DATA="-v /Storage/Backup/graphite:/opt/graphite/storage"
 fi
 
 echo "Building $APP_NAME image"
@@ -18,7 +18,6 @@ docker rm -f $APP_NAME
 
 echo "Running $APP_NAME container"
 docker run $RUN_FLAG \
-    -h $APP_NAME \
     --name $APP_NAME \
     -p 8200:80 \
     -p 2003:2003 \
