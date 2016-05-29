@@ -6,8 +6,8 @@ if [ "$1" == "debug" ]; then
 fi
 
 GRAPHITE_DATA=""
-if [ -d "/Storage/Backup/graphite" ]; then
-    GRAPHITE_DATA="-v /Storage/Backup/graphite:/opt/graphite/storage"
+if [ -d "/Storage/www/database/graphite" ]; then
+    GRAPHITE_DATA="-v /Storage/www/database/graphite:/opt/graphite/storage"
 fi
 
 echo "Building $APP_NAME image"
