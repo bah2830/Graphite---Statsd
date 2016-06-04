@@ -22,5 +22,6 @@ docker run $RUN_FLAG \
     -p 8200:80 \
     -p 2003:2003 \
     -p 8125:8125/udp \
+    -p 8126:8126 \
     $GRAPHITE_DATA \
     $APP_NAME
