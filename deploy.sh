@@ -19,7 +19,7 @@ docker rm -f $APP_NAME
 echo "Running $APP_NAME container"
 docker run $RUN_FLAG \
     --name $APP_NAME \
-    -p 8200:80 \
+    -p 8210:80 \
     -p 2003:2003 \
     -p 8125:8125/udp \
     -p 8126:8126 \
